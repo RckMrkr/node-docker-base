@@ -1,0 +1,13 @@
+{
+  "debug.node.autoAttach": "on",
+  "files.exclude": {
+    "dist": true,
+    "node_modules": true,
+    ".vscode": true,
+    "Dockerfile.dev": true,
+    "nodemon.json": true,
+    "tsconfig.json": true,
+    "package-lock.json": true,
+    "docker-compose.yaml": true,
+  }
+}

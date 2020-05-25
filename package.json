@@ -1,0 +1,22 @@
+{
+  "name": "integrations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "nodemon --inspect=0.0.0.0:9229",
+    "start": "docker-compose up"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.3"
+  }
+}

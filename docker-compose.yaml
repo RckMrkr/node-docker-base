@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./src:/home/node/app/src
+      - ./dist:/home/node/app/dist
+      - ./node_modules:/home/node/app/node_modules
+      - ./tsconfig.json:/home/node/app/tsconfig.json
+      - ./package.json:/home/node/app/package.json
+    command: ['npm', 'run', 'watch']
+  service:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./dist:/home/node/app/dist
+      - ./node_modules:/home/node/app/node_modules
+      - ./package.json:/home/node/app/package.json
+    env_file:
+      - .env
+    environment:
+      - PORT=${PORT-3000}
+    expose:
+      - "${PORT-3000}"
+    ports:
+      - "${PORT-3000}:${PORT-3000}"
+      - "9229:9229"
+    command: ['npm', 'run', 'serve']
