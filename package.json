@@ -1,5 +1,5 @@
 {
-  "name": "integrations",
+  "name": "node-docker-base",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,8 +9,7 @@
     "serve": "nodemon --inspect=0.0.0.0:9229",
     "start": "docker-compose up"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rick Marker",
   "engines": {
     "node": "12.x"
   },
